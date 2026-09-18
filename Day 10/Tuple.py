@@ -1,0 +1,11 @@
+marks = (85, 90, 76, 92, 88)
+print(marks)
+print("---------")
+print(marks[0])
+print("---------")
+print(marks[-1])
+print("---------")
+for mark in marks:
+    print(mark)
+print("----------")
+print(marks[0],[1])
