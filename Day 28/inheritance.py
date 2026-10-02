@@ -1,0 +1,61 @@
+# Employee Management System
+
+class Person:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def display_details(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+
+
+class Employee(Person):
+
+    def __init__(self, name, age, employee_id, salary):
+        super().__init__(name, age)
+        self.employee_id = employee_id
+        self.salary = salary
+
+    def display_details(self):
+        super().display_details()
+        print("Employee ID:", self.employee_id)
+        print("Salary:", self.salary)
+
+
+class Manager(Employee):
+
+    def __init__(self, name, age, employee_id, salary, team_size):
+        super().__init__(name, age, employee_id, salary)
+        self.team_size = team_size
+
+    def display_details(self):
+        super().display_details()
+        print("Team Size:", self.team_size)
+
+
+# Taking input from user
+
+name = input("Enter name: ")
+age = int(input("Enter age: "))
+employee_id = input("Enter employee ID: ")
+salary = float(input("Enter salary: "))
+team_size = int(input("Enter team size: "))
+
+
+# Create Manager object
+
+manager = Manager(
+    name,
+    age,
+    employee_id,
+    salary,
+    team_size
+)
+
+
+# Display details
+
+print("\n--- Manager Details ---")
+manager.display_details()
